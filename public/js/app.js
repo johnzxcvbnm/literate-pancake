@@ -14,7 +14,7 @@ this.createBook = () => {
   }).then(response => {
     console.log(response.data);
     this.books.unshift(response.data);
-    this.createBook = {}
+    this.createForm = {}
   }, error => {
     console.log(error);
   })
@@ -32,5 +32,5 @@ this.getBook = () => {
     console.log(error);
   })
 }
-
+this.getBook();
 }]);
