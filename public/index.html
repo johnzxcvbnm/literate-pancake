@@ -8,9 +8,6 @@
   </head>
   <body ng-controller="MainController as ctrl">
       <h1>{{ctrl.h1}}</h1>
-      <ul>
-        <li ng-repeat="book in ctrl.books">{{book.name}}</li>
-      </ul>
       <form ng-submit="ctrl.createBook()">
         <input type="text" ng-model="ctrl.createForm.name" placeholder="name">
         <input type="text" ng-model="ctrl.createForm.author"placeholder="author">
@@ -18,5 +15,11 @@
         <input type="text" ng-model="ctrl.createForm.addedBy" placeholder="added by">
         <input type="submit" value="CREATE NEW BOOK">
       </form>
+
+      <ul>
+        <li ng-repeat="book in ctrl.books">{{book.name}}
+          <button ng-click="ctrl.deleteBook(book._id)">X</button>
+        </li>
+      </ul>
   </body>
 </html>

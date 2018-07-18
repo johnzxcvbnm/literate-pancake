@@ -32,5 +32,18 @@ this.getBook = () => {
     console.log(error);
   })
 }
+
+this.deleteBook = (id) => {
+  $http({
+    method: 'DELETE',
+    url: '/books/' + id
+  }).then(response => {
+    console.log(response.data);
+    const removeByIndex = this.books.findIndex(book => book._id === id)
+    this.books.splice(removeByIndex, 1)
+  }, error => {
+    console.log(error);
+  })
+}
 this.getBook();
 }]);
