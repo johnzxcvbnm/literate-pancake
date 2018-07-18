@@ -2,9 +2,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("HELLO WORLD");
-});
+app.use(express.static('public'));
+// app.get("/", (req, res) => {
+//   res.send("HELLO WORLD");
+// });
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
