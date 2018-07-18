@@ -1,0 +1,23 @@
+{
+  "name": "literate-pancake",
+  "version": "1.0.0",
+  "description": "practice repo Cordero",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnzxcvbnm/literate-pancake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnzxcvbnm/literate-pancake/issues"
+  },
+  "homepage": "https://github.com/johnzxcvbnm/literate-pancake#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
