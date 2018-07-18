@@ -5,6 +5,21 @@ this.h1 = 'Book App'
 this.book = ''
 this.books = []
 
+this.createForm = {}
+this.createBook = () => {
+  $http({
+    method: 'POST',
+    url: '/books',
+    data: this.createForm
+  }).then(response => {
+    console.log(response.data);
+    this.books.unshift(response.data);
+    this.createBook = {}
+  }, error => {
+    console.log(error);
+  })
+}
+
 this.getBook = () => {
   $http({
     method: 'GET',
