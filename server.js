@@ -15,6 +15,9 @@ app.use(express.static("public"));
 const bookController = require("./controllers/books.js");
 app.use("/books", bookController);
 
+const userController = require("./controllers/users.js");
+app.use("/users", userController);
+
 //Listening Routes
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
