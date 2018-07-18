@@ -45,5 +45,22 @@ this.deleteBook = (id) => {
     console.log(error);
   })
 }
+
+this.updatedBook = (book) => {
+  $http({
+    method: 'PUT',
+    url: '/books/' + book._id,
+    data: {
+      name: this.updatedName,
+      author: this.updatedAuthor,
+      description: this.updatedDescription,
+      addedBy: this.updatedAddedBy
+    }
+  }).then(response => {
+    console.log(response.data);
+  }, error => {
+    console.log(error);
+  })
+}
 this.getBook();
 }]);
