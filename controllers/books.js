@@ -1,16 +1,36 @@
-const mongoose = require("mongoose");
+//Dependancies
+const express = require("express");
+const Book = require("../models/books.js");
+const router = express.Router();
 
-//Schema Breakdown
-//Name: is the name of the book.  All names should be different (unique)
-//Author: is who wrote the actual book
-//Description: is a short description of the book
-//AddedBy: is who added the book to the database (the user).  This should be done automatically when the book is added to the database.
-
-const bookSchema = mongoose.Schema({
-  name: {type: String, required: true, unique: true},
-  author: String,
-  description: String,
-  addedBy: String
+//Get Routes
+//Default Route automatically pulls everything and sorts it by name
+router.get("/", (req, res) => {
+  Book.find({}).sort( { name: 1 } ).exec( (err, foundBooks) => {
+    res.json(foundBooks);
+  });
 });
 
-module.exports = mongoose.model("Books", bookSchema);
+//Post Route
+router.post("/", (req, res) => {
+  Book.create( req.body, (err, createdBook) => {
+    res.json(createdBook);
+  });
+});
+
+//Delete Route
+router.delete("/:id", (req, res) => {
+  Book.findByIdAndRemove( req.params.id, (err, removedBook) => {
+    res.json(removedBook);
+  });
+});
+
+//Put Route
+router.put("/:id", (req, res) => {
+  Book.findByIdAndUpdate( req.params.id, req.body, { new: true }, (err, updatedBook) => {
+    res.json(updatedBook);
+  });
+});
+
+//Export the routes to the controller
+module.exports = router;
