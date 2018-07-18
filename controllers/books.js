@@ -32,4 +32,5 @@ router.put("/:id", (req, res) => {
   });
 });
 
+//Export the routes to the controller
 module.exports = router;
