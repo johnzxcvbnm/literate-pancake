@@ -10,7 +10,7 @@ this.createBook = () => {
   $http({
     method: 'POST',
     url: '/books',
-    data: this.createBook
+    data: this.createForm
   }).then(response => {
     console.log(response.data);
     this.books.unshift(response.data);
