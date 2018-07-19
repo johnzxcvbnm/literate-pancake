@@ -58,6 +58,7 @@ this.updatedBook = (book) => {
     }
   }).then(response => {
     console.log(response.data);
+    this.getBook();
   }, error => {
     console.log(error);
   })
