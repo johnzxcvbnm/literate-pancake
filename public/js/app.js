@@ -58,8 +58,33 @@ this.updatedBook = (book) => {
     }
   }).then(response => {
     console.log(response.data);
+    this.getBook();
   }, error => {
     console.log(error);
+  })
+}
+this.createUser = () => {
+  $http({
+    method: 'POST',
+    url: '/users',
+    data: {
+      username: this.username,
+      password: this.password
+    }
+  }).then(response => {
+    console.log(response);
+  })
+}
+this.logIn = () => {
+  $http({
+    method: 'POST',
+    url: '/sessions',
+    data: {
+      username: this.username,
+      password: this.password
+    }
+  }).then(response => {
+    console.log(response);
   })
 }
 this.getBook();
