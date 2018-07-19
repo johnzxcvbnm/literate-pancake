@@ -16,16 +16,20 @@
         <!-- Register Div -->
         <div>
           <h4>Register</h4>
-          <input>
-          <input>
-          <button class="button">Register</button>
+          <form ng-submit="ctrl.createUser()">
+            <input type="text" ng-model="ctrl.username">
+            <input type="password" ng-model="ctrl.password">
+            <input class="button" type="submit" value="REGISTER">
+          </form>
         </div>
         <!-- Login Div -->
         <div>
           <h4>Login</h4>
-          <input>
-          <input>
-          <button>Login</button>
+          <form ng-submit="ctrl.logIn()">
+            <input type="text" ng-model="ctrl.username">
+            <input type="password" ng-model="ctrl.password">
+            <input type="submit" value="Log In">
+          </form>
         </div>
       </div>
       <!-- Add Book Div -->
