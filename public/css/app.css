@@ -29,9 +29,10 @@ h1 {
   font-size: 2em;
   background: var(--colorTwo);
   /* background-image: url("../assets/always-grey.png"); */
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
+
 }
 
 .wrapper {
@@ -69,6 +70,7 @@ input {
 
 .displayCard {
   width: 20%;
+  min-width: 250px;
   background: var(--colorThree);
   border-radius: 10px;
 }
