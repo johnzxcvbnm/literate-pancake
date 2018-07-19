@@ -5,9 +5,29 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body ng-controller="MainController as ctrl">
+    <div>
       <h1>{{ctrl.h1}}</h1>
+      <!-- Register and Login Wrapper -->
+      <div>
+        <!-- Register Div -->
+        <div>
+          <h4>Register</h4>
+          <input>
+          <input>
+          <button>Register</button>
+        </div>
+        <!-- Login Div -->
+        <div>
+          <h4>Login</h4>
+          <input>
+          <input>
+          <button>Login</button>
+        </div>
+      </div>
+      <!-- Add Book Div -->
       <form ng-submit="ctrl.createBook()">
         <input type="text" ng-model="ctrl.createForm.name" placeholder="name">
         <input type="text" ng-model="ctrl.createForm.author"placeholder="author">
@@ -16,10 +36,26 @@
         <input type="submit" value="CREATE NEW BOOK">
       </form>
 
-      <ul>
-        <li ng-repeat="book in ctrl.books">{{book.name}}
-          <button ng-click="ctrl.deleteBook(book._id)">X</button>
-        </li>
-      </ul>
+      <!-- Book Container Div -->
+      <div>
+        <!-- Book Divs -->
+        <div ng-repeat="book in ctrl.books">
+          <ul>
+            <h3>{{book.name}}</h3>
+            <li>Author: {{book.author}}</li>
+            <li>Description: {{book.description}}</li>
+            <li>Added By: {{book.addedBy}}</li>
+              <form ng-submit="ctrl.updatedBook(book)">
+                <input type="text" ng-model="ctrl.updatedName" placeholder="name"><br/>
+                <input type="text" ng-model="ctrl.updatedAuthor" placeholder="author"><br/>
+                <input type="text" ng-model="ctrl.updatedDescription" placeholder="description"><br/>
+                <input type="text" ng-model="ctrl.updatedAddedBy" placeholder="added by"><br/>
+                <input type="submit" value="UPDATE BOOK"><br/>
+              </form>
+              <button ng-click="ctrl.deleteBook(book._id)">X</button>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
