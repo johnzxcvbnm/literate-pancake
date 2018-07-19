@@ -1,7 +1,7 @@
 :root {
-  --colorOne: #29b5ba;
-  --colorTwo: #b8286e;
-  --colorThree: #b89628;
+  --colorOne: #5dabdb;
+  --colorTwo: #bf5b4f;
+  --colorThree: #bd914f;
 }
 
 html {
@@ -19,6 +19,8 @@ html {
 .container {
   width: 95%;
   margin: auto;
+  letter-spacing: 1px;
+
 }
 
 h1 {
@@ -27,11 +29,46 @@ h1 {
   font-size: 2em;
   background: var(--colorTwo);
   /* background-image: url("../assets/always-grey.png"); */
-
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .wrapper {
   background: var(--colorThree);
-  /* background-image: url("../assets/always-grey.png"); */
+  border-radius: 10px;
+}
 
+.flexy {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 4px;
+  margin: 10px;
+}
+
+.button {
+  font-family: 'Merienda', cursive;
+  background-color: var(--colorTwo);
+  color: white;
+  border: 2px solid var(--colorThree);
+  border-radius: 4px;
+  padding: 4px;
+  /* font-size: 1.1em; */
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--colorThree);
+  color: black;
+  border: 2px solid var(--colorTwo);
+}
+
+.displayCard {
+  width: 20%;
+  background: var(--colorThree);
+  border-radius: 10px;
 }

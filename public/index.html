@@ -18,7 +18,7 @@
           <h4>Register</h4>
           <input>
           <input>
-          <button>Register</button>
+          <button class="button">Register</button>
         </div>
         <!-- Login Div -->
         <div>
@@ -38,9 +38,9 @@
       </form>
 
       <!-- Book Container Div -->
-      <div>
+      <div class="flexy">
         <!-- Book Divs -->
-        <div ng-repeat="book in ctrl.books">
+        <div class="displayCard" ng-repeat="book in ctrl.books">
           <ul>
             <h3>{{book.name}}</h3>
             <li>Author: {{book.author}}</li>
