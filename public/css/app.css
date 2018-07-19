@@ -14,6 +14,7 @@ html {
   background-color: var(--colorOne);
   /* background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");*/
   background-image: url("../assets/always-grey.png");
+  min-width: 400px;
 }
 
 .container {
@@ -50,6 +51,8 @@ h1 {
 input {
   padding: 4px;
   margin: 10px;
+  /* border-radius: 10px; */
+
 }
 
 form {
@@ -82,6 +85,7 @@ form {
   min-width: 250px;
   background: var(--colorThree);
   border-radius: 10px;
+  margin: 20px;
 }
 
 .center {
