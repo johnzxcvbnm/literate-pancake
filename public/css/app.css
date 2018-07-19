@@ -1,3 +1,37 @@
+:root {
+  --colorOne: #29b5ba;
+  --colorTwo: #b8286e;
+  --colorThree: #b89628;
+}
+
 html {
-  background: thistle;
+  /* background: thistle; */
+  /* Header font*/
+  /* font-family: 'Dancing Script', cursive; */
+  /* Everything else Font */
+  font-family: 'Merienda', cursive;
+
+  background-color: var(--colorOne);
+  /* background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");*/
+  background-image: url("../assets/always-grey.png");
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 2px;
+  font-size: 2em;
+  background: var(--colorTwo);
+  /* background-image: url("../assets/always-grey.png"); */
+
+}
+
+.wrapper {
+  background: var(--colorThree);
+  /* background-image: url("../assets/always-grey.png"); */
+
 }
