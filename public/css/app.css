@@ -14,6 +14,7 @@ html {
   background-color: var(--colorOne);
   /* background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");*/
   background-image: url("../assets/always-grey.png");
+  min-width: 400px;
 }
 
 .container {
@@ -29,14 +30,16 @@ h1 {
   font-size: 2em;
   background: var(--colorTwo);
   /* background-image: url("../assets/always-grey.png"); */
-  padding: 5px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
+
 }
 
 .wrapper {
   background: var(--colorThree);
   border-radius: 10px;
+  margin: 25px 0;
 }
 
 .flexy {
@@ -48,6 +51,16 @@ h1 {
 input {
   padding: 4px;
   margin: 10px;
+  /* border-radius: 10px; */
+
+}
+
+form {
+  padding: 10px;
+}
+
+.flexy form{
+
 }
 
 .button {
@@ -69,6 +82,30 @@ input {
 
 .displayCard {
   width: 20%;
+  min-width: 250px;
   background: var(--colorThree);
   border-radius: 10px;
+  margin: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.subheader {
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+h4 {
+  margin-bottom: 0;
+  margin-left: 24px;
+}
+
+button {
+  margin-left: 12px;
 }
