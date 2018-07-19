@@ -5,19 +5,20 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Merienda" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body ng-controller="MainController as ctrl">
-    <div>
+    <div class="container">
       <h1>{{ctrl.h1}}</h1>
       <!-- Register and Login Wrapper -->
-      <div>
+      <div class="flexy wrapper">
         <!-- Register Div -->
         <div>
           <h4>Register</h4>
           <input>
           <input>
-          <button>Register</button>
+          <button class="button">Register</button>
         </div>
         <!-- Login Div -->
         <div>
@@ -37,9 +38,9 @@
       </form>
 
       <!-- Book Container Div -->
-      <div>
+      <div class="flexy">
         <!-- Book Divs -->
-        <div ng-repeat="book in ctrl.books">
+        <div class="displayCard" ng-repeat="book in ctrl.books">
           <ul>
             <h3>{{book.name}}</h3>
             <li>Author: {{book.author}}</li>
