@@ -50,14 +50,14 @@
             <li>Author: {{book.author}}</li>
             <li>Description: {{book.description}}</li>
             <li>Added By: {{book.addedBy}}</li>
-              <form ng-submit="ctrl.updatedBook(book)">
+              <form ng-if="ctrl.loggedIn" ng-submit="ctrl.updatedBook(book)">
                 <input type="text" ng-model="ctrl.updatedName" placeholder="name"><br/>
                 <input type="text" ng-model="ctrl.updatedAuthor" placeholder="author"><br/>
                 <input type="text" ng-model="ctrl.updatedDescription" placeholder="description"><br/>
                 <input type="text" ng-model="ctrl.updatedAddedBy" placeholder="added by"><br/>
                 <input type="submit" value="UPDATE BOOK"><br/>
               </form>
-              <button ng-click="ctrl.deleteBook(book._id)">X</button>
+              <button ng-if="ctrl.loggedIn" ng-click="ctrl.deleteBook(book._id)">X</button>
           </ul>
         </div>
       </div>

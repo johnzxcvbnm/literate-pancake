@@ -85,6 +85,15 @@ this.logIn = () => {
     }
   }).then(response => {
     console.log(response);
+    this.loggedInUser();
+  })
+}
+this.loggedInUser = () => {
+  $http({
+    method: 'GET',
+    url: '/log'
+  }).then(response => {
+    this.loggedIn = response.data.username
   })
 }
 this.getBook();
